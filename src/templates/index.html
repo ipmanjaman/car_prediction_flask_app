@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Purchasing Amount</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <!--<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"> -->
+</head>
+<body style="background: rgb(255,200,185)">
+  <div class="login">
+   <h1 style="text-align:center">Car Purchasing AI</h1>
+   <form action ="{{url_for('prediction_amount')}}" method=""post>
+   <fieldset>
+      <label for="age">Age:  </label>
+      <input type="text" name="age" placeholder="age" required="required">
+      <br>
+      <br>
+      <label for="annual_salary">Annual Salary $:  </label>
+      <input type="text" name="annual_salary" placeholder="annual_salary" required="required">
+      <br>
+      <br>
+      <label for="credit_card_debit">Credit Card Debit $:  </label>
+      <input type="text" name="credit_card_debit" placeholder="credit_card_debit" required="required">
+      <br>
+      <br>
+      <label for="net_worth">Net Worth $:  </label>
+      <input type="text" name="net_worth" placeholder="net_worth" required="required">
+      <br>
+      <br>
+    </fieldset>
+      <button type="submit" class="button">Car Purchase Amount</button>
+    </form>
+    <br>
+    <br>
+    <h2>
+    {{ prediction_amount }}
+    </h2>
+  </div>
+</body>
+</html>
